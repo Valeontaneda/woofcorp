@@ -1,18 +1,16 @@
-import { Card, CardBody, CardImg, Row, Col, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardImg, Row, Col, CardTitle, CardText } from 'reactstrap';
 
 const ServiceCard = ({ service }) => {
     const { name, image, description } = service;
     return (
             <Row>
-                <Col lg='12'>
-                    <Card>
-                        <CardTitle>{name}</CardTitle>
-                        <CardImg src={image} />
-                    </Card>
-                </Col>
                 <Col>
-                    <Card>
-                        <CardBody>{description}</CardBody>
+                    <Card className="my-4" style={{width: '18rem'}}>
+                        <CardImg src={image} />
+                        <CardBody>
+                            <CardTitle tag="h5">{name}</CardTitle>
+                            <CardText>{description}</CardText>
+                        </CardBody>
                     </Card>
                 </Col>
             </Row>

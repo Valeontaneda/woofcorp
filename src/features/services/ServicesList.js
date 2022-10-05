@@ -13,7 +13,7 @@ const CampsitesList = () => {
                     <ServiceCard service={service} />
                 </Col>
                 );
-            })};
+            })}
         </Row>
     );
 };
